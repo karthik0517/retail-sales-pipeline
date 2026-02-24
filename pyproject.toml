@@ -1,0 +1,20 @@
+[project]
+name = "retail_pipeline"
+version = "0.1.0"
+description = "Enterprise Retail Sales Pipeline - Databricks Deployment Demo"
+authors = [
+    { name = "Karthik" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+bronze = "retail_pipeline.bronze:run"
+silver = "retail_pipeline.silver:run"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

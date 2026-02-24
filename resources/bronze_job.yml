@@ -1,0 +1,23 @@
+resources:
+  jobs:
+    bronze_job:
+      name: bronze_job
+
+      tasks:
+        - task_key: bronze_task
+          environment_key: default
+
+          python_wheel_task:
+            package_name: retail_pipeline
+            entry_point: bronze
+            named_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+              input_path: /Volumes/app_dev_catalog/bronze/raw_data/orders.csv
+
+      environments:
+        - environment_key: default
+          spec:
+            client: "1"
+            dependencies:
+              - ../dist/retail_pipeline-0.1.0-py3-none-any.whl

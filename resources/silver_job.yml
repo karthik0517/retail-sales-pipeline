@@ -1,0 +1,22 @@
+resources:
+  jobs:
+    silver_job:
+      name: silver_job
+
+      tasks:
+        - task_key: silver_task
+          python_wheel_task:
+            package_name: retail_pipeline
+            entry_point: silver
+            named_parameters:
+              catalog: ${var.catalog}
+              bronze_schema: bronze
+              silver_schema: silver
+          environment_key: default
+
+      environments:
+        - environment_key: default
+          spec:
+            client: "1"
+            dependencies:
+              - ../dist/retail_pipeline-0.1.0-py3-none-any.whl
