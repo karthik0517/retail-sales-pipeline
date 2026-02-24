@@ -11,6 +11,7 @@ dependencies = []
 [project.scripts]
 bronze = "retail_pipeline.bronze:run"
 silver = "retail_pipeline.silver:run"
+gold = "retail_pipeline.gold:run"
 
 [build-system]
 requires = ["setuptools>=61.0"]
