@@ -2,6 +2,9 @@ resources:
   jobs:
     retail_pipeline_job:
       name: retail_pipeline_job
+      
+      run_as:
+        service_principal_name: retail-pipeline-runtime
 
       schedule:
         quartz_cron_expression: "0 0 2 * * ?"
