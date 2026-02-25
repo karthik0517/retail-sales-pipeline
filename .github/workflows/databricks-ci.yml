@@ -58,9 +58,9 @@ jobs:
       - name: Configure Databricks Auth
         run: |
           echo "DATABRICKS_HOST=${{ secrets.DATABRICKS_HOST }}" >> $GITHUB_ENV
-          echo "DATABRICKS_CLIENT_ID=${{ secrets.DATABRICKS_CLIENT_ID }}" >> $GITHUB_ENV
-          echo "DATABRICKS_CLIENT_SECRET=${{ secrets.DATABRICKS_CLIENT_SECRET }}" >> $GITHUB_ENV
-          echo "ARM_TENANT_ID=${{ secrets.ARM_TENANT_ID }}" >> $GITHUB_ENV
+          echo "ARM_CLIENT_ID=${{ secrets.ARM_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "ARM_CLIENT_SECRET=${{ secrets.ARM_CLIENT_SECRET }}" >> $GITHUB_ENV
+          echo "ARM_TENANT_ID=${{ secrets.ARM_TENANT_ID }}" >> $GITHUB_ENV 
 
       # 7️⃣ Validate Bundle
       - name: Validate Bundle
