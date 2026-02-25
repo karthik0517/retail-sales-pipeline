@@ -44,6 +44,3 @@ targets:
     variables:
       catalog: app_dev_catalog
       schema: prod
-    permissions:
-      - user_name: karthik90.devops@gmail.com
-        level: CAN_MANAGE
