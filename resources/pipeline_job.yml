@@ -2,9 +2,6 @@ resources:
   jobs:
     retail_pipeline_job:
       name: retail_pipeline_job
-      
-      run_as:
-        service_principal_name: 70459a3a-402a-4714-8699-1a3d2c9b87d7
 
       schedule:
         quartz_cron_expression: "0 0 2 * * ?"
