@@ -12,7 +12,7 @@ workspace:
   root_path: /Workspace/Shared/retail_sales_pipeline
 
 permissions:
-  - service_principal_name: retail-databricks-cicd
+  - service_principal_name: 8510c7b2-0a59-4220-8a1d-9e414caf0578
     level: CAN_MANAGE
 
 # Variable declarations. These variables are assigned in the dev/prod targets below.
@@ -31,7 +31,7 @@ targets:
     default: true
     workspace:
       host: https://adb-7405608713055155.15.azuredatabricks.net
-      root_path: /Workspace/Shared/retail_sales_pipeline/dev
+      root_path: ~/retail_sales_pipeline/dev
     variables:
       catalog: app_dev_catalog
       schema: bronze
