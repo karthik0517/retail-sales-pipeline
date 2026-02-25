@@ -14,7 +14,6 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
-
 targets:
   dev:
     # The default target uses 'mode: development' to create a development copy.
