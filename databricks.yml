@@ -8,6 +8,13 @@ include:
   - resources/*.yml
   - resources/*/*.yml
 
+workspace:
+  root_path: /Workspace/Shared/retail_sales_pipeline
+
+permissions:
+  - service_principal_name: retail-databricks-cicd
+    level: CAN_MANAGE
+
 # Variable declarations. These variables are assigned in the dev/prod targets below.
 variables:
   catalog:
