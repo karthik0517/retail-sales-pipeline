@@ -31,6 +31,7 @@ targets:
     default: true
     workspace:
       host: https://adb-7405608713055155.15.azuredatabricks.net
+      root_path: /Workspace/Shared/retail_sales_pipeline/dev
     variables:
       catalog: app_dev_catalog
       schema: bronze
