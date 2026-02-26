@@ -17,7 +17,7 @@ def run():
     if spark is None:
         spark = SparkSession.builder.getOrCreate()
 
-    print(f"Reading from: {input_path}")
+    print(f"Reading from:- {input_path}")
     print(f"Writing to: {catalog}.{schema}.orders_bronze")
 
     df = spark.read.option("header", "true").csv(input_path)
